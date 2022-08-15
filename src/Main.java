@@ -3,6 +3,7 @@ import ViewModel.ViewModel;
 
 public class Main {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
 		int hour;
