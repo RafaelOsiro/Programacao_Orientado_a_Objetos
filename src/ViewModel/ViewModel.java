@@ -2,10 +2,6 @@ package ViewModel;
 
 public class ViewModel {
 	
-	int hours;
-	float salary;
-	float payment;
-	
 	/**
 	 * Use this function to calculate salary from worker. 
 	 * If hour quantity is higher than 40 hours, it will increase 50% of salary.
@@ -40,8 +36,6 @@ public class ViewModel {
 		
 		float overTimeSalary, normalSalary;
 		int overTime;
-		
-		
 		
 		overTime = hour - 40;				
 		overTimeSalary = overTime * (salary + (salary * 0.5F));
