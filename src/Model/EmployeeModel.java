@@ -1,4 +1,4 @@
-package ViewModel.Model;
+package Model;
 
 public class EmployeeModel {
 

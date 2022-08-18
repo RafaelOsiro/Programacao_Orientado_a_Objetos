@@ -2,6 +2,9 @@ package View;
 
 public class MenuView {
 
+	/**
+	 * Use this function to print in java console the menu of the system
+	 */
 	public void funcPrintMenu() {
 		System.out.println("\n");
 		System.out.println("[1] Cadastrar um funcionario");
@@ -11,6 +14,9 @@ public class MenuView {
 		System.out.println("\nDigite uma opcao: ");
 	}
 	
+	/**
+	 * Use this function to print in java console to ask user if wants to confirm exit of the program
+	 */
 	public void funcPrintExit() {
 		System.out.println("Voce quer sair do programa?");
 		System.out.println("[1] Sim");

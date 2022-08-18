@@ -1,8 +1,10 @@
 package ViewModel;
 
 import java.util.Scanner;
+
+import Model.EmployeeModel;
 import View.MenuView;
-import ViewModel.Model.EmployeeModel;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -18,6 +20,9 @@ public class RetirementViewModel {
 	Scanner scan = new Scanner(System.in);
 	ArrayList<EmployeeModel> employees = new ArrayList<EmployeeModel>();
 	
+	/**
+	 * Use this function to create a new employee and will store in List
+	 */
 	public void funcCreateNewEmployee() {
 		
 		int register;
@@ -44,6 +49,10 @@ public class RetirementViewModel {
 		System.out.println("Cadastro efetuado com sucesso!\n\n");
 	}
 	
+	/**
+	 * Use this function to search some employee givin him register
+	 * @return employee EmployeeModel
+	 */
 	public EmployeeModel funcSearchRegister() {
 		
 		int searchRegister = scan.nextInt();
@@ -62,6 +71,9 @@ public class RetirementViewModel {
 		return null;
 	}
 	
+	/**
+	 * Use this function to search some employee and will return data of the employee
+	 */
 	public void funcSearchEmployee() {
 		
 		System.out.println("-==Procurar um funcionario==-");
@@ -77,6 +89,9 @@ public class RetirementViewModel {
 		}
 	}
 	
+	/**
+	 * Use this function to check if employee is retired or not and will print in java console if employee is retired or not and will ask the user if require retirement 
+	 */
 	public void funcCheckRetirement() {
 		
 		System.out.println("-==Checar se um funcionario==-");
@@ -112,12 +127,23 @@ public class RetirementViewModel {
 		}
 	}
 	
-	private int funcGetYear( ) {
+	/**
+	 * Use this function to get current year
+	 * @return year	int
+	 */
+	private int funcGetYear() {
 		
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		return year;
 	}
 	
+	/**
+	 * Use this function to check if an employee is retired or not
+	 * 
+	 * @param birthYear	int
+	 * @param admissionYear	int
+	 * @return employeee is retired	boolean
+	 */
 	private boolean funcIsRetired(int birthYear, int admissionYear) {
 		
 		int year = funcGetYear(), age, workedTime;
