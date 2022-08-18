@@ -1,12 +1,11 @@
 package ViewModel;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 import Model.EmployeeModel;
 import View.MenuView;
-
-import java.util.ArrayList;
-import java.util.Calendar;
 
 public class RetirementViewModel {
 	
@@ -127,7 +126,7 @@ public class RetirementViewModel {
 		}
 	}
 	
-	/**
+  /**
 	 * Use this function to get current year
 	 * @return year	int
 	 */
