@@ -1,9 +1,12 @@
+import ViewModel.StorageViewModel;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		StorageViewModel viewModel = new StorageViewModel();
+		
+		viewModel.funcInitiateProduct();
+		viewModel.funcListAllProducts();
 	}
-
 }
