@@ -3,13 +3,25 @@ package View;
 import java.util.Scanner;
 
 import ViewModel.BookViewModel;
+import ViewModel.BorrowViewModel;
+import ViewModel.ClientViewModel;
 
 public class BookView {
 	
-	private BookViewModel viewModel;
-	
+	private BookViewModel bookViewModel;
+	private ClientViewModel clientViewModel;
+	private BorrowViewModel borrowViewModel;
+
 	public void setViewModel(BookViewModel viewModel) {
-		this.viewModel = viewModel;
+		this.bookViewModel = viewModel;
+	}
+	
+	public void setClientViewModel(ClientViewModel clientViewModel) {
+		this.clientViewModel = clientViewModel;
+	}
+
+	public void setBorrowViewModel(BorrowViewModel borrowViewModel) {
+		this.borrowViewModel = borrowViewModel;
 	}
 
 	Scanner scanner = new Scanner(System.in);
@@ -27,10 +39,18 @@ public class BookView {
 			
 			switch (option) {
 			case 1: {
-				viewModel.funcAddNewBook();
+				bookViewModel.funcAddNewBook();
 				break;
 			}
 			case 2: {
+				clientViewModel.funcAddNewClient();
+				break;
+			}
+			case 3: {
+				borrowViewModel.funcBorrowBook(bookViewModel.getBooks(), clientViewModel.getClients());
+				break;
+			}
+			case 4: {
 				isExit = funcConfirmExit();
 				break;
 			}
@@ -45,7 +65,9 @@ public class BookView {
 	private void funcPrintTitle() {
 		System.out.println("DIGITE UMA OPCAO!");
 		System.out.println("1 - CADASTRAR UM LIVRO");
-		System.out.println("2 - SAIR DO SISTEMA");
+		System.out.println("2 - CADASTRAR UM CLIENTE");
+		System.out.println("3 - EMPRESTAR UM LIVRO");
+		System.out.println("4 - SAIR DO SISTEMA");
 	}
 	
 	private boolean funcConfirmExit() {
