@@ -10,7 +10,10 @@ public class ProductsViewModel {
 	ArrayList<ProductsModel> products = new ArrayList<ProductsModel>();
 	Scanner scanner = new Scanner(System.in);
 	
-	
+	public ArrayList<ProductsModel> getProducts() {
+		return products;
+	}
+
 	public void funcAddNewProduct() {
 		
 		ProductsModel product = new ProductsModel();

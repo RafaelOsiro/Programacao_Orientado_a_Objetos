@@ -3,17 +3,23 @@ package View;
 import java.util.Scanner;
 
 import View.ProductsView;
+import ViewModel.OrderViewModel;
 import ViewModel.ProductsViewModel;
 
 public class HomeView {
+	
+	Scanner scanner = new Scanner(System.in);
 	
 	public void funcMenu() {
 		
 		ProductsView productsView = new ProductsView();
 		ProductsViewModel productsViewModel = new ProductsViewModel();
 		productsView.setViewModel(productsViewModel);
-
-		Scanner scanner = new Scanner(System.in);
+		
+		OrderView orderView = new OrderView();
+		OrderViewModel orderViewModel = new OrderViewModel();
+		orderView.setOrderViewModel(orderViewModel);
+		orderView.setProductViewModel(productsViewModel);
 
 		boolean isExit = false;
 		int option;
@@ -29,11 +35,11 @@ public class HomeView {
 				break;
 			}
 			case 2: {
-			
+				orderView.funcAddNewOrder();
 				break;
 			}
 			case 3: {
-				
+				isExit = funcConfirmExit();
 				break;
 			}
 			default:
@@ -49,5 +55,33 @@ public class HomeView {
 		System.out.println("1 - Cadastrar um produto.");
 		System.out.println("2 - Fazer um pedido.");
 		System.out.println("3 - Sair do sistema.");
+	}
+	
+	private boolean funcConfirmExit() {
+		
+		int option;
+		boolean isValid = false, exit = false;
+		
+		do {
+			
+			System.out.println("DESEJA SAIR DO SISTEMA?");
+			System.out.println("1 - SIM");
+			System.out.println("2 - NAO");
+			
+			option = this.scanner.nextInt();
+			
+			if (option == 1) {
+				isValid = true;
+				exit = true;
+				
+			} else if (option == 2) {
+				isValid = true;
+				exit = false;
+			} else {
+				isValid = false;
+			}
+		} while (isValid == false);
+		
+		return exit;
 	}
 }
