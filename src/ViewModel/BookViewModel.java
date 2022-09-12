@@ -15,6 +15,11 @@ public class BookViewModel {
 	private Scanner scanner = new Scanner(System.in);
 	private ArrayList<BookModel> books = new ArrayList<BookModel>();
 	
+
+	public ArrayList<BookModel> getBooks() {
+		return books;
+	}
+
 	public void funcAddNewBook() {
 		
 		BookModel book = new BookModel();
@@ -95,9 +100,22 @@ public class BookViewModel {
 	
 	private void funcAddQuantity (BookModel bookModel) {
 		
-		int quantity;
+		int quantity = 0;
 		
-		quantity = 0;
+		do {
+			System.out.println("Digite a quantidade de livro: ");
+			
+			quantity = scanner.nextInt();
+			
+			if (!(quantity < 0)) {
+				isValid = true;
+			} else {
+				System.out.println("O campo 'Preco' nao pode ser menor que 0.");
+			}
+			
+		} while(isValid == false);
+		
+		isValid = false;
 		
 		bookModel.setQuantity(quantity);
 	}
