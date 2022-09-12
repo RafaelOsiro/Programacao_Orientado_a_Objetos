@@ -1,4 +1,4 @@
-# <H1> Exercício de Criar Classes </H1>
+# <H1> Lampada </H1>
 
 <div><H2>
 <br>UNIVERSIDADE CATÓLICA DE BRASÍLIA
@@ -8,6 +8,6 @@
 <br>DISCENTE: RAFAEL RIKI OGAWA OSIRO</br>
 </H2></div>
 
-### Atividade - Criação de Classes Instruções:
+### Atividade - Criação de Classes:
 
 1) Escreva uma classe que represente uma lâmpada. Crie objetos do tipo lâmpada. Insira informações nos objetos.
