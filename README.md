@@ -18,13 +18,13 @@ Figura 1.1.
 
 Figura 1.1: Hierarquia de classes para construir um cadastro de mídias.
 
-A Tabela 1.1 fornece uma descrição dos métodos que deverão ser elaborados para cada uma das classes.
+<br>Abaixo fornece uma descrição dos métodos que deverão ser elaborados para cada uma das classes.
 
 Método: Descrição
-getTipo(): Retorna uma String com o nome da classe.
-getDetalhes(): Retorna uma String com as informações contidas nos campos.
-printDados(): Imprime as informações contidas nos campos da classe. Para tanto, usa dois métodos para recuperar estas informações:
-getTipo() e getDetalhes(): Estas funções por sua vez são polimórficas, ou seja, seu tipo retorno varia de acordo com a classe escolhida, tal que este método é sobreposto nas subclasses.
-inserirDado s(): Insere os dados necessários para se preencher os campos de objeto de uma dada classe. Seu comportamento é polimórfico.
+<br>getTipo(): Retorna uma String com o nome da classe.</br>
+<br>getDetalhes(): Retorna uma String com as informações contidas nos campos.</br>
+<br>printDados(): Imprime as informações contidas nos campos da classe. Para tanto, usa dois métodos para recuperar estas informações: getTipo() e getDetalhes()</br>
+<br>getTipo() e getDetalhes(): Estas funções por sua vez são polimórficas, ou seja, seu tipo retorno varia de acordo com a classe escolhida, tal que este método é sobreposto nas subclasses.</br>
+<br>inserirDado s(): Insere os dados necessários para se preencher os campos de objeto de uma dada classe. Seu comportamento é polimórfico.</br>
 
-Além dos métodos descritos na Tabela 1.1, deverão ser criados os métodos get e set correspondentes para retornar e modificar o conteúdo dos campos, respectivamente, bem como os construtores com e sem parâmetros de cada classe. Criar um programa que simule o uso de um cadastro de CD e DVDs.
+Além dos métodos descritos acima, deverão ser criados os métodos get e set correspondentes para retornar e modificar o conteúdo dos campos, respectivamente, bem como os construtores com e sem parâmetros de cada classe. Criar um programa que simule o uso de um cadastro de CD e DVDs.
