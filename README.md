@@ -15,6 +15,7 @@ com seus produtos. Para tanto, foi elaborado o diagrama de classes dado na
 Figura 1.1.
 
 ![image](https://user-images.githubusercontent.com/79678821/199741031-07ca9f05-a276-43c6-b9aa-9a6e63692f62.png)
+
 Figura 1.1: Hierarquia de classes para construir um cadastro de mídias.
 
 A Tabela 1.1 fornece uma descrição dos métodos que deverão ser elaborados para cada uma das classes.
