@@ -89,7 +89,7 @@ public class CD extends Midia {
 		isValid = false;
 		
 		do {
-			System.out.println("Digite o Numero de Musicas: ");
+			System.out.println("Digite o Numecro de Musicas: ");
 			nMusicas = scanner.nextInt();
 			
 			if (nMusicas >= 0) {
