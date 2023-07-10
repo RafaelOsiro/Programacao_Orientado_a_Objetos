@@ -21,4 +21,5 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/bin/
+Exercicio_1_-_Calculo_Trabalhista/bin/
+Exercicio_2_-_Calculo_Aposentadoria/bin/
